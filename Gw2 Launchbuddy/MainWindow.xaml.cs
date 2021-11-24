@@ -899,28 +899,24 @@ namespace Gw2_Launchbuddy
 
         private void rb_slideshowmode(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                Videomode.Visibility = Visibility.Collapsed;
-                Slideshow.Visibility = Visibility.Visible;
-                LBConfiguration.Config.cinema_video = false;
-                LBConfiguration.Config.cinema_slideshow = true;
-                LBConfiguration.Save();
-            }
-            catch { }
+            if (Videomode == null || Slideshow == null) return;
+
+            Videomode.Visibility = Visibility.Collapsed;
+            Slideshow.Visibility = Visibility.Visible;
+            LBConfiguration.Config.cinema_video = false;
+            LBConfiguration.Config.cinema_slideshow = true;
+            LBConfiguration.Save();
         }
 
         private void rb_videomode(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                Slideshow.Visibility = Visibility.Collapsed;
-                Videomode.Visibility = Visibility.Visible;
-                LBConfiguration.Config.cinema_video = true;
-                LBConfiguration.Config.cinema_slideshow = false;
-                LBConfiguration.Save();
-            }
-            catch { }
+            if (Videomode == null || Slideshow == null) return;
+
+            Slideshow.Visibility = Visibility.Collapsed;
+            Videomode.Visibility = Visibility.Visible;
+            LBConfiguration.Config.cinema_video = true;
+            LBConfiguration.Config.cinema_slideshow = false;
+            LBConfiguration.Save();
         }
 
         private void bt_cinema_setvideo_Click(object sender, RoutedEventArgs e)
