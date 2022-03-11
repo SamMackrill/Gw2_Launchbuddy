@@ -56,14 +56,14 @@ namespace Gw2_Launchbuddy
 
         public static void ReportCrashToAll(Exception err)
         {
-            ReportCrash reportCrash = new ReportCrash(null);
+            //ReportCrash reportCrash = new ReportCrash(null);
 
-            foreach (MailAddress email in emails)
-            {
-                reportCrash.ToEmail = email.Address;
-                reportCrash.DoctorDumpSettings = Settings;
-                reportCrash.Send(err);
-            }
+            //foreach (MailAddress email in emails)
+            //{
+            //    reportCrash.ToEmail = email.Address;
+            //    reportCrash.DoctorDumpSettings = Settings;
+            //    reportCrash.Send(err);
+            //}
         }
     }
 }

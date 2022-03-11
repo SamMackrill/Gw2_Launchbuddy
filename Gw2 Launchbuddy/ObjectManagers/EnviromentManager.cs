@@ -93,7 +93,7 @@ namespace Gw2_Launchbuddy.ObjectManagers
             AccountManager.ImportAccounts();
             ClientManager.ImportActiveClients();
             CrashAnalyzer.ReadCrashLogs();
-            IconManager.Init();
+            //IconManager.Init();
 
             //Temp AddonManager
             AddOnManager.LoadAddons(LBAddonPath);
